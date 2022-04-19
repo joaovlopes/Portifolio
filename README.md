@@ -9,3 +9,7 @@ Tecnologias usadas 🚀
 - Html
 - Css/Scss
 - BootStrap
+
+Acesse pelo link abaixo!
+
+https://joaovlopes.github.io/Portifolio/

@@ -58,41 +58,58 @@
       </div>
 
     </header>
+
+    <!-- <div>
+      <p>teste</p>
+    </div> -->
     
-    <div class="home" id="home">
+    <div class="home hidden" id="home">
 
       <div class="container">
         <div class="row">
-          <div class="col mt-5 pt-5 ml-5 apresentacao">
+          <div class="col ml-5 apresentacaoInfo">
             
-              <h5>OLÁ, EU SOU</h5>
-              <h1>JOÃO LOPES</h1>
-              <h6>DESENVOLVEDOR FRONT-END</h6>
+              <div class="textInfo efeitoBorda">
+                <h5>OLÁ, EU SOU</h5>
+                <h1>JOÃO LOPES</h1>
+                <h6>DESENVOLVEDOR FRONT-END</h6>
 
-              <div class="buttons">
-                <a href="https://www.linkedin.com/in/joaovlopesmartins/" target="blank"><button class="button"><i class="bi bi-linkedin"></i>   Linkedin</button></a>
-                <a href="https://github.com/joaovlopes" target="blank"><button class="button"><i class="bi bi-github"></i>   Github</button></a>
+                <div class="buttons">
+                  <a href="https://www.linkedin.com/in/joaovlopesmartins/" target="blank"><button class="button"><i class="bi bi-linkedin"></i>   Linkedin</button></a>
+                  <a href="https://github.com/joaovlopes" target="blank"><button class="button"><i class="bi bi-github"></i>   Github</button></a>
+                </div>
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
               
           </div>
 
-          <div class="col apresentacao">
+          <div class="col apresentacaoImage">
             
             <img src="assets/looper.png">
             
-        </div>
+          </div>
 
         </div>
       </div>
 
     </div>
 
-    <div class="sobreMim" id="sobreMim">
+    <div class="sobreMim hidden" id="sobreMim">
       <div class="container">
         <div class="row">
 
           <div class="col mt-5 pt-5 ml-5 image">
-            <img src="https://github.com/joaovlopes.png" class="perfilImage">
+            <div class="avatarProfile efeitoBorda">
+              <img src="https://github.com/joaovlopes.png" class="perfilImage">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
 
           <div class="col-lg mt-5 pt-5 textSobreMim">
@@ -113,7 +130,7 @@
       </div>
     </div>
 
-    <div class="experiencia" id="experiencia">
+    <div class="experiencia hidden" id="experiencia">
       <div class="container">
         <div class="row">
 
@@ -235,7 +252,7 @@
       </div>
     </div>
 
-    <div class="projetos" id="projetos">
+    <div class="projetos hidden" id="projetos">
       <div class="container">
         <div class="row">
 
@@ -292,7 +309,7 @@
       </div>
     </div>
 
-    <footer>
+    <footer class="footerClass hidden">
       <div class="container">
         <div class="row">
           <div class="col-12 pt-5 footer">
@@ -307,4 +324,7 @@
     </footer>
 
 </body>
+
+<script src="scripts.js"></script>
+
 </html>

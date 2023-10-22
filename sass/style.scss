@@ -1,10 +1,5 @@
-
-$backgroundcolorPrimary: #121212;
-$backgroundcolorSecondary: #171717;
-$colorPrimary: #30C152;
-$colorSecondary: #ffffff;
-$colorTertiary:#9f3ca8;
-$textComum: #838282;
+@import './border-style.scss';
+@import './colors.scss';
 
 @mixin buttonStyle ($border, $border-image, $border-image-slice, $border-radius, $background-color, $color) {
     border: $border;
@@ -23,6 +18,10 @@ header{
     background-color: $backgroundcolorPrimary;
 }
 
+body {
+    background-color: $backgroundcolorPrimary;
+}
+
 .navbarLeft p{
     color: $colorPrimary;
     margin: 0 0 0 15%;
@@ -32,10 +31,12 @@ header{
     display: flex;
     color: $colorSecondary;
     justify-content: center;
+
     a {
         text-decoration: none;
         color: $colorSecondary;
     }
+
     p {
         margin-bottom: 0;
         padding: 0 15px;
@@ -51,24 +52,47 @@ header{
     min-width: 108px;
 }
 
-.home {
+.home, .sobreMim {
     background-color: $backgroundcolorPrimary;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.apresentacao {
-    h5 {
-        color: $colorSecondary;
-        margin-left: 15%;
-        margin-top: inherit;
+.apresentacaoInfo {
+    align-self: center;
+}
+
+.avatarProfile {
+    padding: 10px;
+
+    img {
+        margin: 0;
     }
-    h6 {
-        color: $colorSecondary;
+}
+
+.apresentacaoInfo, .apresentacaoImage {
+
+    .textInfo {
+        padding: 30px;
+
         margin-left: 15%;
+
+        h5 {
+            color: $colorSecondary;
+            margin-top: inherit;
+        }
+    
+        h6 {
+            color: $colorSecondary;
+        }
+    
+        h1 {
+            color: $colorPrimary;
+        }
     }
-    h1 {
-        color: $colorPrimary;
-        margin-left: 15%;
-    }
+
     img {
         width: 750px;
         padding: 10% 0;
@@ -81,26 +105,21 @@ header{
 
 .buttons {
     margin-top: 3%;
-    margin-left: 15%;
     cursor: pointer;
+    
     .github {
         margin-left: 7px;
     }
 }
 
-.sobreMim {
-    background-color: $backgroundcolorSecondary;
-}
-
 .perfilImage {
     width: 300px;
-    border-left: 3px solid $colorPrimary;
-    margin-left: 13%;
 }
 
 .textSobreMim {
-    padding: 0 10%;
+    padding: 0 10% 20px;
     margin-bottom: 10%;
+
     h2 {
         color: $colorSecondary;
     }
@@ -120,6 +139,7 @@ header{
 .topicExperiencia {
     margin-left: 7%;
     width: 80%;
+
     h5 {
         margin: 0;
         padding: 10px 10px;
@@ -131,6 +151,7 @@ header{
 .titleExperiencia {
     text-align: -webkit-center;
     padding-bottom: 7%;
+
     h2 {
         padding-bottom: 2%;
     }
@@ -167,9 +188,6 @@ header{
 
 .accordion-button {
     border-left: 3px solid $colorPrimary;
-}
-
-.accordion-button {
     background-color: $backgroundcolorPrimary !important;
     color: $colorSecondary;
 }
@@ -177,6 +195,7 @@ header{
 .accordion-flush .accordion-collapse {
     background-color: $backgroundcolorPrimary !important;
     color: $textComum !important;
+
     p {
         color: $colorPrimary;
     }
@@ -197,14 +216,17 @@ header{
 .textExperiencia {
     margin-left: 7%;
     margin-bottom: 10%;
-    h4{
+
+    h4 {
         color: $colorSecondary;
         width: 90%;
     }
+
     h6 {
         color: $colorPrimary;
         margin: 30px 0 20px;
     }
+
     p {
         color: $textComum;
     }
@@ -212,6 +234,7 @@ header{
 
 .separationData {
     display: flex;
+
     p {
         margin-bottom: 0;
         margin-top: 2px;
@@ -220,7 +243,6 @@ header{
 
 
 .projetos {
-    background-color: $backgroundcolorSecondary;
     a {
         text-decoration: none;
     }
@@ -228,77 +250,141 @@ header{
 
 .titleProject {
     color: $colorSecondary;
+
     h2 {
         margin-left: 9.2%;
+        margin-bottom: 8%;
     }
 }
 
-.projectsLeft {
+.projectsLeft, .projectsRigth {
     margin-bottom: 10%;
     padding-left: 10%;
     flex-wrap: wrap;
+
     img {
         min-width: 70%;
         border-left: 3px solid $colorPrimary;
-        margin-top: 8%;
     }
+
     h3 {
         margin: 7% 0 4%;
         color: $colorSecondary;
     }
+
     p {
         color: $textComum;
     }
+
     .textSpecial {
         color: $colorPrimary;
     }
+}
+
+.projectsLeft {
     button {
         margin-bottom: 30px;
         display: block;
     }
 }
+
 .projectsRigth {
-    margin-bottom: 10%;
-    padding-left: 10%;
-    flex-wrap: wrap;
-    img {
-        min-width: 70%;
-        border-left: 3px solid $colorPrimary;
-        margin-top: 8%;
-    }
-    h3 {
-        margin: 7% 0 4%;
-        color: $colorSecondary;
-    }
-    p {
-        color: $textComum;
-    }
-    .textSpecial {
-        color: $colorPrimary;
-    }
     button {
         margin-bottom: 10%;
         display: block;
     }
 }
+
 footer {
     background-color: $backgroundcolorPrimary;
     padding-bottom: 2%;
 }
-.footer{
+
+.footer {
     text-align: center;
     color: $colorSecondary;
     text-align: -webkit-center;
+
     .frase {
         color: $textComum;
     }
 }
 
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
 
+    .apresentacaoInfo, .image {
+        transform: translateX(-100%);
+        transition: all 0.8s;
+    }
 
+    .apresentacaoImage, .textSobreMim {
+        transform: translateX(-100%);
+        transition: all 1s;
+    }
+
+    &.experiencia {
+        .titleCertificados {
+            transform: translateX(-100%);
+            transition: all 1s;
+        }
+
+        .accordion {
+            transform: translateX(-100%);
+            transition: all 1s;
+        }
+    }
+
+    &.projetos {
+        .projectsLeft, .titleProject {
+            transform: translateX(-100%);
+            transition: all 1s;
+        }
+
+        .projectsRigth {
+            transform: translateX(-100%);
+            transition: all 1s;
+        }
+    }
+
+    &.footerClass {
+        transform: translateX(-100%);
+        transition: all 1s;
+    }
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+
+    .apresentacaoInfo, .apresentacaoImage, .image, .textSobreMim, .experiencia {
+        transform: translateX(0);
+        transition: all 1s;
+    }
+
+    &.experiencia {
+        .titleCertificados, .accordion {
+            transform: translateX(0);
+            transition: all 1s;
+        }
+    }
+
+    &.projetos {
+        .projectsLeft, .projectsRigth, .titleProject {
+            transform: translateX(0);
+            transition: all 1s;
+        }
+    }
+
+    &.footerClass {
+        transform: translateX(0);
+        transition: all 1.0s;
+    }
+}
 
 @media (max-width: 1199px){
-    .apresentacao {
+    .apresentacaoInfo, .apresentacaoImage {
         img {
             width: 600px;
         }
@@ -306,37 +392,39 @@ footer {
 }
 
 @media (max-width: 991px){
-    .apresentacao{
+    .apresentacaoInfo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
 
-        h5 {
-            margin-left: 15%;
+        .textInfo {
+            margin: 0;
         }
-        h6 {
-            margin-left: 15%;
-        }
-        h1 {
-            margin-left: 15%;
-        }
+        
     }
-    .image {
+
+    .apresentacaoImage {
         text-align: center;
+    }
+
+    .image {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
         .perfilImage {
             margin: 0;
         }
     }
 }
 
-
-
 @media(max-width: 767px){
-    .apresentacao{
+    .apresentacaoInfo, .apresentacaoImage {
         img {
             width: 400px;
         }
     }
 }
-
-
 
 @media (max-width: 575px) {
     #navbarLeft p{
@@ -344,66 +432,71 @@ footer {
     }
 }
 
-
-
 @media (max-width: 522px) {
-    .burguer{
+    .burguer {
         display: block;
         color: $colorSecondary;
         display: contents;
         cursor: pointer;
     }
-    .navbarRigth{
+
+    .navbarRigth {
         display: none;
     }
+
     i {
         color: $colorSecondary;
     }
+
     .dropdown-item {
         color: $colorSecondary;
     }
+
     .dropdown-menu {
         background-color: $backgroundcolorPrimary;
     }
 }
 
-
-
 @media(max-width: 425px) {
-    .apresentacao{
+    .apresentacaoInfo, .apresentacaoImage {
         img {
             width: 300px;
         }
     }
+
     .perfilImage {
         width: 200px;
     }
 }
 
-
-
 @media(max-width: 325px){
-    .apresentacao{
+    .apresentacaoInfo, .apresentacaoImage {
         img {
             width: 200px;
         }
+
         h5 {
             margin-left: 10%;
         }
+
         h6 {
             margin-left: 10%;
         }
+
         h1 {
             margin-left: 10%;
         }
     }
+
     .buttons {
         margin-left: 10%;
     }
+
     footer {
         .frase {
             font-size: small;
         }
+
         p {
             font-size: 9px;
             width: 60%;

@@ -12,8 +12,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/3d5424bd99.js" crossorigin="anonymous"></script>
     <title>Portfolio João Victor Lopes Martins</title>
 </head>
+
 <body>
     
     <header>
@@ -23,14 +26,14 @@
         <div class="row">
 
           <div class="col p-3 ml-5 navbarLeft">
-            <p>Portfólio</p>
+            <p class="border-style-bottom">Portfólio</p>
           </div>
 
           <div class="col p-3 navbarRigth">
-            <a href="#home"><p>Home</p></a>
-            <a href="#sobreMim"><p class="sobreMim-navbar">Sobre mim</p></a>
-            <a href="#experiencia"><p>Certificados</p></a>
-            <a href="#projetos"><p>Projetos</p></a>
+            <a href="#home"><p class="border-style-bottom">Home</p></a>
+            <a href="#sobreMim"><p class="sobreMim-navbar border-style-bottom">Sobre mim</p></a>
+            <a href="#experiencia"><p class="border-style-bottom">Certificados</p></a>
+            <a href="#projetos"><p class="border-style-bottom">Projetos</p></a>
           </div>
 
           <div class="burguer">
@@ -260,48 +263,88 @@
           
           <div class="col-lg mb-5 pb-5 projectsLeft">
 
-            <img src="assets/Projeto-Natal.png" class="img-fluid" style="max-width: 70%;">
-            <h3>Landing-Page de Natal</h3>
-            <p>Meu primeiro projeto desenvolvido apenas com Html e Css, uma tela que serviu como aprendizado e foi muito
-               importante para fixar os conhecimentos dessas duas tecnologias!</p>
-            <p class="textSpecial">Tecnologias usadas: Html5 e Css3</p>
-            <a href="https://joaovlopes.github.io/layout-de-natal/" target="blank"><button class="button"><i class="bi bi-eye"></i>   Visualizar</button></a>
+            <div>
+              <img src="assets/Projeto-Natal.png" class="img-fluid" style="max-width: 70%;">
+              <h3>Landing-Page de Natal</h3>
+              <p>Meu primeiro projeto desenvolvido apenas com Html e Css, uma tela que serviu como aprendizado e foi muito
+                importante para fixar os conhecimentos dessas duas tecnologias!</p>
+              <p class="textSpecial">Tecnologias usadas:</p>
 
-            <img src="assets/Projeto-Tower.png" class="img-fluid" style="max-width: 70%;">
-            <h3>Torre de Controle</h3>
-            <p>Uma tela desenvolvida com o foco total em praticar as habilidades no JavaScript, nesse projeto você se torna o piloto
-              de uma nave! Confira o projeto clicando no botão abaixo e se divirta um pouco!
-            </p>
-            <p class="textSpecial">Tecnologias usadas: Html5, Css3 e JavaScript</p>
-            <a href="https://joaovlopes.github.io/Control-tower-of-a-spaceship/" target="blank"><button class="button"><i class="bi bi-eye"></i>   Visualizar</button></a>    
+              <div class="icons-tech">
+                <i class="fab fa-html5 fa-xs fa-fade" style="color: #b85900;" title="Html5"></i>
+                <i class="fa-brands fa-css3-alt fa-fade" style="color: #1361e7;" title="Css3"></i>
+              </div>
+              <a href="https://joaovlopes.github.io/layout-de-natal/" target="blank"><button class="button"><i class="bi bi-eye"></i>   Visualizar</button></a>
+            </div>
+
+            <div>
+              <img src="assets/Projeto-Tower.png" class="img-fluid" style="max-width: 70%;">
+              <h3>Torre de Controle</h3>
+              <p>Uma tela desenvolvida com o foco total em praticar as habilidades no JavaScript, nesse projeto você se torna o piloto
+                de uma nave! Confira o projeto clicando no botão abaixo e se divirta um pouco!
+              </p>
+              <p class="textSpecial">Tecnologias usadas:</p>
+
+              <div class="icons-tech">
+                <i class="fab fa-html5 fa-xs fa-fade" style="color: #b85900;" title="Html"></i>
+                <i class="fa-brands fa-sass fa-fade" style="color: #cc6699;" title="Sass"></i>
+                <i class="fa-brands fa-square-js fa-fade" style="color: #efd81d;" title="JavaScript"></i>
+              </div>
+              <a href="https://joaovlopes.github.io/Control-tower-of-a-spaceship/" target="blank"><button class="button"><i class="bi bi-eye"></i>   Visualizar</button></a>   
+            </div> 
             
             
-            <img src="assets/Projeto-IgniteFeed.png" class="img-fluid" style="max-width: 70%;">
-            <h3>Ignite Feed</h3>
-            <p>Um mini projeto de publicações e curtidas para praticar os conceitos basicos do React, plataforma responsiva e interativa!
-            </p>
-            <p class="textSpecial">Tecnologias usadas: React, Css e TypeScript</p>
-            <a href="https://joaovlopes.github.io/ignite-feed/" target="blank"><button class="button"><i class="bi bi-eye"></i>   Visualizar</button></a>  
+            <div>
+              <img src="assets/Projeto-IgniteFeed.png" class="img-fluid" style="max-width: 70%;">
+              <h3>Ignite Feed</h3>
+              <p>Um mini projeto de publicações e curtidas para praticar os conceitos basicos do React, plataforma responsiva e interativa!
+              </p>
+              <p class="textSpecial">Tecnologias usadas:</p>
+
+              <div class="icons-tech">
+                <i class="fa-brands fa-react fa-spin" style="color: #5bcbeb;" title="ReactJs"></i>
+                <i class="fa-brands fa-sass fa-fade" style="color: #cc6699;" title="Sass"></i>
+                <img src="assets/icon-typescript.gif" alt="" title="Typescript">
+              </div>
+              <a href="https://joaovlopes.github.io/ignite-feed/" target="blank"><button class="button"><i class="bi bi-eye"></i>   Visualizar</button></a>  
+            </div>
 
           </div>
                 
           <div class="col ml-5 projectsRigth">
           
-            <img src="assets/Projeto-Jordan.png" class="img-fluid" style="max-width: 70%;">
-            <h3>Jordan Shoes</h3>
-            <p>Uma tela Inspirada no desefio 2 do YuriCode. Minha primeira tela responsiva usando o framework bootstrap.
-              Uma tela onde foi essencial para aprender na marra como utilizar o bootstrap. 
-            </p>
-            <p class="textSpecial">Tecnologias usadas: Html5, Css3 e BootStrap</p>
-            <a href="https://joaovlopes.github.io/Jordan-Shoes/" target="blank"><button class="button"><i class="bi bi-eye"></i>   Visualizar</button></a>
+            <div>
+              <img src="assets/Projeto-Jordan.png" class="img-fluid" style="max-width: 70%;">
+              <h3>Jordan Shoes</h3>
+              <p>Uma tela Inspirada no desefio 2 do YuriCode. Minha primeira tela responsiva usando o framework bootstrap.
+                Uma tela onde foi essencial para aprender na marra como utilizar o bootstrap. 
+              </p>
+              <p class="textSpecial">Tecnologias usadas:</p>
+              <div class="icons-tech">
+                <i class="fab fa-html5 fa-xs fa-fade" style="color: #b85900;" title="Html"></i>
+                <i class="fa-brands fa-css3-alt fa-fade" style="color: #1361e7;" title="Css3"></i>
+                <i class="fa-brands fa-bootstrap fa-fade" style="color: #6d2bf1;" title="BootStrap"></i>
+              </div>
+              <a href="https://joaovlopes.github.io/Jordan-Shoes/" target="blank"><button class="button"><i class="bi bi-eye"></i>   Visualizar</button></a>
+            </div>
 
-            <img src="assets/Projeto-SpiderMan.png" class="img-fluid" style="max-width: 70%;">
-            <h3>Spider-Man</h3>
-            <p>Uma tela inspirada no desafio 18 do YuriCode! Uma tela com intuito de praticar ainda mais algumas habilidades 
-              do html e css, sem a utilização de frameworks, apenas css puro.
-            </p>
-            <p class="textSpecial">Tecnologias usadas: Html5 e Css3</p>
-            <a href="https://joaovlopes.github.io/Desafio-18-Spider_Man/" target="blank"><button class="button"><i class="bi bi-eye"></i>   Visualizar</button></a>
+            <div>
+              <img src="assets/Projeto-Bussines-Card.png" class="img-fluid" style="max-width: 70%;">
+              <h3>Bussines Card</h3>
+              <p>Um projeto em Angular com o foco nos formularios reativos do Angular.
+                Nele você pode criar o seu cartão de visitas do jeito que você quiser! Preencha todas as informações e personalize todas as cores, icones e fontes!
+              </p>
+              <p class="textSpecial">Tecnologias usadas:</p>
+
+              <div class="icons-tech">
+                <i class="fa-brands fa-angular fa-flip" style="color: #d6002f;" title="AngularJs"></i>
+                <i class="fa-brands fa-sass fa-fade" style="color: #cc6699;" title="Sass"></i>
+                <img src="assets/icon-typescript.gif" alt="" title="Typescript">
+              </div>
+
+              
+              <a href="https://joaovlopes.github.io/business-card/" target="blank"><button class="button"><i class="bi bi-eye"></i>   Visualizar</button></a>
+            </div>
 
           </div>
         
@@ -315,7 +358,7 @@
           <div class="col-12 pt-5 footer">
 
             <p class="frase">"Pra quem tem pensamento forte, o impossivel é só questão de opinião"</p>
-            <p>(51)98031-9583</p>
+            <p><i class="fa-brands fa-whatsapp fa-shake fa-lg" style="color: #ffffff;"></i> (51) 98031-9583</p>
             <p>joaovlopesmartins@gmail.com</p>
           
           </div>

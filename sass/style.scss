@@ -1,36 +1,83 @@
 @import './border-style.scss';
 @import './colors.scss';
 
-@mixin buttonStyle ($border, $border-image, $border-image-slice, $border-radius, $background-color, $color) {
+@mixin buttonStyle ($border, $border-image, $border-image-slice, $border-radius, $background-color, $color, $position, $z-index) {
     border: $border;
     border-image: $border-image;
     border-image-slice: $border-image-slice;
     border-radius: $border-radius;
     background-color: $background-color;
     color: $color;
+    position: $position;
+    z-index: $z-index;
 }
 
 .button {
-    @include buttonStyle(2px solid transparent, linear-gradient(20deg, $colorPrimary, $colorTertiary),1, 10px, $backgroundcolorPrimary, $colorSecondary);
+    @include buttonStyle(2px solid transparent, linear-gradient(20deg, $colorPrimary, $colorTertiary),1, 0, $backgroundcolorPrimary, $colorSecondary, relative, 1);
 }
 
-header{
+.button::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(20deg, $colorPrimary, $colorTertiary);
+    transition: all 0.5s ease;
+}
+
+.button:hover::before {
+    width: 100%;
+}
+
+header {
     background-color: $backgroundcolorPrimary;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 
 body {
     background-color: $backgroundcolorPrimary;
 }
 
-.navbarLeft p{
+.navbarLeft p {
     color: $colorPrimary;
+    width: fit-content;
     margin: 0 0 0 15%;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.border-style-bottom {
+    position: relative;
+    z-index: 1;
+}
+
+.border-style-bottom::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(20deg, $colorPrimary, $colorTertiary);
+    transition: all 0.5s ease;
+}
+
+.border-style-bottom:hover::before {
+    width: 100%;
 }
 
 .navbarRigth {
     display: flex;
     color: $colorSecondary;
     justify-content: center;
+    gap: 30px;
 
     a {
         text-decoration: none;
@@ -39,8 +86,6 @@ body {
 
     p {
         margin-bottom: 0;
-        padding: 0 15px;
-        cursor: pointer;
     }
 }
 
@@ -49,7 +94,7 @@ body {
 }
 
 .sobreMim-navbar {
-    min-width: 108px;
+    text-wrap: nowrap;
 }
 
 .home, .sobreMim {
@@ -166,10 +211,6 @@ body {
     color: $colorSecondary;
 }
 
-.accordion-item {
-    color: $colorSecondary;
-}
-
 .accordion-button:focus {
     box-shadow: 0 0 0 0.25rem $colorPrimary !important;
     border: none;
@@ -211,6 +252,14 @@ body {
 
 .accordion-item {
     background-color: $backgroundcolorPrimary;
+}
+
+.accordion-item:hover {
+    // background-color: red;
+
+    .accordion-button {
+        background-color: $backgroundcolorSecondary !important;
+    }
 }
 
 .textExperiencia {
@@ -262,8 +311,9 @@ body {
     padding-left: 10%;
     flex-wrap: wrap;
 
-    img {
+    .img-fluid {
         min-width: 70%;
+        height: 13rem;
         border-left: 3px solid $colorPrimary;
     }
 
@@ -283,7 +333,7 @@ body {
 
 .projectsLeft {
     button {
-        margin-bottom: 30px;
+        margin-bottom: 10%;
         display: block;
     }
 }
@@ -292,6 +342,23 @@ body {
     button {
         margin-bottom: 10%;
         display: block;
+    }
+}
+
+.icons-tech {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 16px;
+
+    i {
+        font-size: 40px;
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+        margin-left: -8px;
     }
 }
 

@@ -79,13 +79,34 @@
   border: 2px solid transparent;
   border-image: linear-gradient(20deg, #30C152, #9f3ca8);
   border-image-slice: 1;
-  border-radius: 10px;
+  border-radius: 0;
   background-color: #121212;
   color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(20deg, #30C152, #9f3ca8);
+  transition: all 0.5s ease;
+}
+
+.button:hover::before {
+  width: 100%;
 }
 
 header {
   background-color: #121212;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 body {
@@ -94,13 +115,39 @@ body {
 
 .navbarLeft p {
   color: #30C152;
+  width: fit-content;
   margin: 0 0 0 15%;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.border-style-bottom {
+  position: relative;
+  z-index: 1;
+}
+
+.border-style-bottom::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(20deg, #30C152, #9f3ca8);
+  transition: all 0.5s ease;
+}
+
+.border-style-bottom:hover::before {
+  width: 100%;
 }
 
 .navbarRigth {
   display: flex;
   color: #ffffff;
   justify-content: center;
+  gap: 30px;
 }
 .navbarRigth a {
   text-decoration: none;
@@ -108,8 +155,6 @@ body {
 }
 .navbarRigth p {
   margin-bottom: 0;
-  padding: 0 15px;
-  cursor: pointer;
 }
 
 .burguer {
@@ -117,7 +162,7 @@ body {
 }
 
 .sobreMim-navbar {
-  min-width: 108px;
+  text-wrap: nowrap;
 }
 
 .home, .sobreMim {
@@ -221,10 +266,6 @@ body {
   color: #ffffff;
 }
 
-.accordion-item {
-  color: #ffffff;
-}
-
 .accordion-button:focus {
   box-shadow: 0 0 0 0.25rem #30C152 !important;
   border: none;
@@ -265,6 +306,10 @@ body {
 
 .accordion-item {
   background-color: #121212;
+}
+
+.accordion-item:hover .accordion-button {
+  background-color: #171717 !important;
 }
 
 .textExperiencia {
@@ -308,8 +353,9 @@ body {
   padding-left: 10%;
   flex-wrap: wrap;
 }
-.projectsLeft img, .projectsRigth img {
+.projectsLeft .img-fluid, .projectsRigth .img-fluid {
   min-width: 70%;
+  height: 13rem;
   border-left: 3px solid #30C152;
 }
 .projectsLeft h3, .projectsRigth h3 {
@@ -324,13 +370,28 @@ body {
 }
 
 .projectsLeft button {
-  margin-bottom: 30px;
+  margin-bottom: 10%;
   display: block;
 }
 
 .projectsRigth button {
   margin-bottom: 10%;
   display: block;
+}
+
+.icons-tech {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+.icons-tech i {
+  font-size: 40px;
+}
+.icons-tech img {
+  width: 50px;
+  height: 50px;
+  margin-left: -8px;
 }
 
 footer {

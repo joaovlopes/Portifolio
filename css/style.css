@@ -336,47 +336,44 @@ body {
   margin-top: 2px;
 }
 
+.projetos {
+  margin-bottom: 10%;
+}
 .projetos a {
   text-decoration: none;
+}
+.projetos .container .row {
+  padding: 0 10%;
 }
 
 .titleProject {
   color: #ffffff;
 }
 .titleProject h2 {
-  margin-left: 9.2%;
   margin-bottom: 8%;
 }
 
-.projectsLeft, .projectsRigth {
+.listProjects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5% 10%;
   margin-bottom: 10%;
-  padding-left: 10%;
   flex-wrap: wrap;
 }
-.projectsLeft .img-fluid, .projectsRigth .img-fluid {
-  min-width: 70%;
+.listProjects .img-fluid {
+  min-width: 80%;
   height: 13rem;
   border-left: 3px solid #30C152;
 }
-.projectsLeft h3, .projectsRigth h3 {
+.listProjects h3 {
   margin: 7% 0 4%;
   color: #ffffff;
 }
-.projectsLeft p, .projectsRigth p {
+.listProjects p {
   color: #838282;
 }
-.projectsLeft .textSpecial, .projectsRigth .textSpecial {
+.listProjects .textSpecial {
   color: #30C152;
-}
-
-.projectsLeft button {
-  margin-bottom: 10%;
-  display: block;
-}
-
-.projectsRigth button {
-  margin-bottom: 10%;
-  display: block;
 }
 
 .icons-tech {
@@ -428,11 +425,7 @@ footer {
   transform: translateX(-100%);
   transition: all 1s;
 }
-.hidden.projetos .projectsLeft, .hidden.projetos .titleProject {
-  transform: translateX(-100%);
-  transition: all 1s;
-}
-.hidden.projetos .projectsRigth {
+.hidden.projetos .titleProject, .hidden.projetos .listProjects {
   transform: translateX(-100%);
   transition: all 1s;
 }
@@ -453,7 +446,7 @@ footer {
   transform: translateX(0);
   transition: all 1s;
 }
-.show.projetos .projectsLeft, .show.projetos .projectsRigth, .show.projetos .titleProject {
+.show.projetos .titleProject, .show.projetos .listProjects {
   transform: translateX(0);
   transition: all 1s;
 }
@@ -463,7 +456,7 @@ footer {
 }
 
 @media (max-width: 1199px) {
-  .apresentacaoInfo img, .apresentacaoImage img {
+  .apresentacaoImage img {
     width: 600px;
   }
 }
@@ -487,6 +480,11 @@ footer {
   .image .perfilImage {
     margin: 0;
   }
+  .listProjects {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
 }
 @media (max-width: 767px) {
   .apresentacaoInfo img, .apresentacaoImage img {
@@ -496,6 +494,9 @@ footer {
 @media (max-width: 575px) {
   #navbarLeft p {
     text-align: center;
+  }
+  .listProjects .img-fluid {
+    width: 100%;
   }
 }
 @media (max-width: 522px) {
